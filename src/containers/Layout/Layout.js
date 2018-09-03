@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import classes from './Layout.css';
+import Search from "../Search/Search";
 
 export default class Layout extends Component {
     render (){
@@ -9,7 +10,7 @@ export default class Layout extends Component {
               <section className={classes.Content}>
                   <section className={classes.Ad}>Left ad</section>
                   <section className={classes.ContentBody}>
-                      {this.props.children}
+                      <Search/>
                   </section>
                   <section className={classes.Ad}>Right ad</section>
               </section>
