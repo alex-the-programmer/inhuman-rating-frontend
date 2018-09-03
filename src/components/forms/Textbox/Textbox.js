@@ -5,7 +5,10 @@ const textbox = (props) =>{
     return(
         <Input
             onChange={props.onChange}
-
+            fullWidth
+            placeholder={props.placeholder}
+            autoFocus={props.autoFocus}
+            endAdornment={props.endAdornment}
         ></Input>
     );
 };
