@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import {Route, Switch} from 'react-router-dom';
 import classes from './Layout.css';
 import Search from "../Search/Search";
 
@@ -10,7 +11,10 @@ export default class Layout extends Component {
               <section className={classes.Content}>
                   <section className={classes.Ad}>Left ad</section>
                   <section className={classes.ContentBody}>
-                      <Search/>
+                      <Switch>
+                          <Route exact path='/search' component={Search}/>
+                          <Route component={Search}/> {/*Temp route*/}
+                      </Switch>
                   </section>
                   <section className={classes.Ad}>Right ad</section>
               </section>

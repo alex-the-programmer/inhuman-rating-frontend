@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import { applyMiddleware, createStore, compose } from 'redux';
@@ -14,7 +15,9 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(logger, thun
 
 const app = (
     <Provider store={store}>
-      <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>
 );
 
