@@ -7,8 +7,9 @@ import Avatar from "@material-ui/core/Avatar/Avatar";
 
 const profile = (props) => {
     return(
-      <Card>
-          <CardContent className={classes.Card}>
+      <Card className={classes.Card}>
+          <CardContent className={classes.CardContent}>
+              {props.socialLogo? <img className={classes.SocialLogo} src={props.socialLogo} /> : null}
               <div className={classes.Column}>
                   <Avatar
                       alt={props.name}

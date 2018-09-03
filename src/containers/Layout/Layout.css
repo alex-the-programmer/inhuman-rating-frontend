@@ -6,12 +6,15 @@
     left: 0;
     border: 1px solid black;
     text-align: center;
+    z-index: 500;
+    background-color: white;
 }
 
 .Content{
     width: 100%;
     display: inline-flex;
     margin-top: 110px;
+    z-index: 100;
 }
 
 .ContentBody{

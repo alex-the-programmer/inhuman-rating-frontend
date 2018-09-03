@@ -1,5 +1,9 @@
 .Card{
+    margin: 10px auto;
+}
+.CardContent{
     display: flex;
+    justify-content: space-between;
 }
 
 .Column{
@@ -15,4 +19,11 @@
 .Avatar{
     width: 90px !important;
     height: 90px !important;
+}
+.SocialLogo{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -12px;
+    left: -18px;
 }
