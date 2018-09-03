@@ -1,0 +1,13 @@
+.Card{
+    display: flex;
+}
+
+.Column{
+    margin-right: 10px;
+}
+
+.List{
+    list-style: none;
+    padding: 0 0;
+    margin: 0 0 ;
+}
