@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import Textbox from "../../components/forms/Textbox/Textbox";
 import classes from './Search.css';
 import InputAdornmentButton from "../../components/forms/InputAdornmentButton/InputAdornmentButton";
 import SearchIcon from '@material-ui/icons/Search';
 import ProfileCard from "../../components/cards/Profile/Profile";
+import * as actionTypes from '../../store/profilesSearch/actions';
 
-export default class Search extends Component{
+class Search extends Component{
     render(){
         return(
            <div className={classes.Search}>
@@ -13,7 +15,7 @@ export default class Search extends Component{
                     placeholder="Start typing name, phone number, email address or social profile name"
                     autoFocus
                     endAdornment={
-                        <InputAdornmentButton onClick={null}>
+                        <InputAdornmentButton onClick={this.props.onSearch}>
                                 <SearchIcon/>
                         </InputAdornmentButton>
                         }/>
@@ -151,3 +153,15 @@ export default class Search extends Component{
         )
     }
 }
+
+export default connect(state=> {
+    return {
+        profiles: state.profileSearch.profiles,
+        loading: state.profileSearch.loading,
+        error: state.profileSearch.error
+    }
+}, distpatch=> {
+    return {
+        onSearch: searchTerms => {console.log(searchTerms);distpatch(actionTypes.SEARCH_PROFILES_START, searchTerms)}
+    }
+})(Search);

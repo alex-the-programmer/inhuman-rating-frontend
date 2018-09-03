@@ -31,10 +31,10 @@ const searchProfilesFail = (state, action)=>{
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.SEARCH_PROFILES_START: searchProfilesStart(state, action);
-        case actionTypes.SEARCH_PROFILES_SUCCESS: searchProfilesSuccess(state, action);
-        case actionTypes.SEARCH_PROFILES_FAIL: searchProfilesFail(state, action);
-        default: state;
+        case actionTypes.SEARCH_PROFILES_START: return searchProfilesStart(state, action);
+        case actionTypes.SEARCH_PROFILES_SUCCESS: return searchProfilesSuccess(state, action);
+        case actionTypes.SEARCH_PROFILES_FAIL: return searchProfilesFail(state, action);
+        default: return state;
     }
 };
 
