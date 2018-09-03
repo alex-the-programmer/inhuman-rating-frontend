@@ -3,11 +3,19 @@ import Card from "@material-ui/core/Card/Card";
 import CardContent from "@material-ui/core/CardContent/CardContent";
 import Typography from "@material-ui/core/Typography/Typography";
 import classes from './Profile.css';
+import Avatar from "@material-ui/core/Avatar/Avatar";
 
 const profile = (props) => {
     return(
       <Card>
           <CardContent className={classes.Card}>
+              <div className={classes.Column}>
+                  <Avatar
+                      alt={props.name}
+                      src={props.avatar}
+                      className={classes.Avatar}
+                  />
+              </div>
               <div className={classes.Column}>
                   <Typography variant="headline">
                       {props.name}

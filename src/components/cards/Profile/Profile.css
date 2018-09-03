@@ -11,3 +11,8 @@
     padding: 0 0;
     margin: 0 0 ;
 }
+
+.Avatar{
+    width: 90px !important;
+    height: 90px !important;
+}

@@ -50,7 +50,8 @@ export default class Search extends Component{
                     }, {
                         id: 2,
                         name: 'School 2'
-                    }]}/>
+                    }]}
+                    avatar="https://material-ui.com/static/images/uxceo-128.jpg"/>
 
            </div>
         )
